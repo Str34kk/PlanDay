@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             mc:Ignorable="d"
+             x:Class="Plan_Day.MainPage"
+             xmlns:local="clr-namespace:Plan_Day"
+             xmlns:vm="clr-namespace:Plan_Day.ViewModels">
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid>
+        <skia:SKCanvasView  x:Name="BackgroundGradien"
+                            PaintSurface="BackgroundGradien_PaintSurface"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="Fill" />
+
+        <StackLayout>
+            <!--Okey logo-->
+            <Grid HeightRequest="250"
+                  Margin="0,30,0,10">
+                <skia:SKCanvasView  x:Name="CircleGradien"
+                                    PaintSurface="CircleGradien_PaintSurface" />
+                <skia:SKCanvasView x:Name="OkeyIcon"
+                                   PaintSurface="OkeyIcon_PaintSurface" />
+            </Grid>
+            <!--Text under logo-->
+            <Label Text="Something"
+                       Style="{StaticResource Header}"
+                        HorizontalOptions="Center" />
+            <Label Text="{Binding Content}"
+                       Style="{StaticResource Description}"
+                        HorizontalOptions="Center" />
+
+            <!--Username-->
+            <Grid Margin="30, 130, 30, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <skia:SKCanvasView x:Name="UserSVG"
+                                   PaintSurface="UserSVG_PaintSurface"
+                                   Grid.Column="0" />
+                <local:ClearEntryRenderer x:Name="Username"
+                                          Placeholder="Email"
+                                          IsReadOnly="False"
+                                          Style="{StaticResource Username}"
+                                          Margin="0"
+                                          Grid.Column="1"
+                                          VerticalOptions="End"
+                                          Text="{Binding Username}" />
+                <skia:SKCanvasView x:Name="LineUnderUserSVG"
+                                   PaintSurface="LineUnderUserSVG_PaintSurface"
+                                   Grid.ColumnSpan="2"
+                                   Margin="5, 0, 5, 0" />
+            </Grid>
+
+            <!--Passwd-->
+            <Grid Margin="30, 20, 30, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <skia:SKCanvasView x:Name="PasswordSVG"
+                                   PaintSurface="PasswordSVG_PaintSurface"
+                                   Grid.Column="0" />
+                <local:ClearEntryRenderer x:Name="Password"
+                                          Placeholder="Password"
+                                          Style="{StaticResource Username}"
+                                          Grid.Column="1"
+                                          VerticalOptions="End"
+                                          IsPassword="True"
+                                          Text="{Binding Password}" />
+                <skia:SKCanvasView x:Name="LineUnderPasswordSVG"
+                                   PaintSurface="LineUnderUserSVG_PaintSurface"
+                                   Grid.ColumnSpan="2"
+                                   Margin="5, 0, 5, 0" />
+            </Grid>
+
+            <!--Sign In-->
+            <Button BackgroundColor="White"
+                   BorderColor="White"
+                   CornerRadius="38"
+                   Padding="80, 15, 80, 15"
+                   Margin="60, 60, 60, 0"
+                   Text="Sign In"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Style="{StaticResource SignIn}"
+                   Command="{Binding LoginCommand}" />
+
+            <!--Sign Up-->
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         Margin="0,30,0,0">
+                <Label Text="Don't have an account?"
+                       Style="{StaticResource Dark}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="Sign up!"
+                       Style="{StaticResource SignUp}"
+                       Padding="0,0,0,20">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

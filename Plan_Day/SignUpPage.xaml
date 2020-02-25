@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             mc:Ignorable="d"
+             x:Class="Plan_Day.SignUpPage"
+             xmlns:local="clr-namespace:Plan_Day"
+             xmlns:vm="clr-namespace:Plan_Day.ViewModels">
+
+    <ContentPage.BindingContext>
+        <vm:RegisterViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid>
+        <!--Background Gradient-->
+        <skia:SKCanvasView  x:Name="BackgroundGradien"
+                            PaintSurface="BackgroundGradien_PaintSurface"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="Fill" />
+
+        <StackLayout>
+            <!--Username-->
+            <Grid Margin="30, 130, 30, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <skia:SKCanvasView x:Name="UserSVG"
+                                   PaintSurface="UserSVG_PaintSurface"
+                                   Grid.Column="0" />
+                <local:ClearEntryRenderer x:Name="EnterUsername"
+                                          Placeholder="Email"
+                                          IsReadOnly="False"
+                                          Style="{StaticResource Username}"
+                                          Margin="0"
+                                          Grid.Column="1"
+                                          VerticalOptions="End"
+                                          Text="{Binding Email}" />
+                <skia:SKCanvasView x:Name="LineUnderUserSVG"
+                                   PaintSurface="LineUnderUserSVG_PaintSurface"
+                                   Grid.ColumnSpan="2"
+                                   Margin="5, 0, 5, 0" />
+            </Grid>
+
+            <!--Passwd-->
+            <Grid Margin="30, 20, 30, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <skia:SKCanvasView x:Name="PasswordSVG"
+                                   PaintSurface="PasswordSVG_PaintSurface"
+                                   Grid.Column="0" />
+                <local:ClearEntryRenderer x:Name="EnterPassword"
+                                          Placeholder="Password"
+                                          Style="{StaticResource Username}"
+                                          Grid.Column="1"
+                                          VerticalOptions="End"
+                                          IsPassword="True"
+                                          Text="{Binding Password}" />
+                <skia:SKCanvasView x:Name="LineUnderPasswordSVG"
+                                   PaintSurface="LineUnderUserSVG_PaintSurface"
+                                   Grid.ColumnSpan="2"
+                                   Margin="5, 0, 5, 0" />
+            </Grid>
+
+            <!--RepeatPasswd-->
+            <Grid Margin="30, 20, 30, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <skia:SKCanvasView x:Name="RePasswordSVG"
+                                   PaintSurface="PasswordSVG_PaintSurface"
+                                   Grid.Column="0" />
+                <local:ClearEntryRenderer x:Name="ReEnterPassword"
+                                          Placeholder="Confirm Password"
+                                          Style="{StaticResource Username}"
+                                          Grid.Column="1"
+                                          VerticalOptions="End"
+                                          IsPassword="True"
+                                          Text="{Binding ConfirmPassword}" />
+                <skia:SKCanvasView x:Name="LineUnderRePasswordSVG"
+                                   PaintSurface="LineUnderUserSVG_PaintSurface"
+                                   Grid.ColumnSpan="2"
+                                   Margin="5, 0, 5, 0" />
+            </Grid>
+
+            <!--Zaluguj-->
+            <Button BackgroundColor="White"
+                   BorderColor="White"
+                   CornerRadius="38"
+                   Padding="80, 15, 80, 15"
+                   Margin="60, 60, 60, 0"
+                   Text="Sign Up"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Style="{StaticResource SignIn}"
+                   Command="{Binding RegisterCommand}" />
+
+            <!--Back to Login Page-->
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         Margin="0,30,0,0">
+                <Label Text="Arleady have an account?"
+                       Style="{StaticResource Dark}" />
+                <Label Text="Sign in!"
+                       Style="{StaticResource SignUp}"
+                       Padding="0,0,0,20">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

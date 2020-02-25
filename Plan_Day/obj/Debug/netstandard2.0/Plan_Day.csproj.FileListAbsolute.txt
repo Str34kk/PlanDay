@@ -1,0 +1,15 @@
+C:\Users\kszpy\source\repos\Plan_Day\Plan_Day\Plan_Day\bin\Debug\netstandard2.0\Plan_Day.deps.json
+C:\Users\kszpy\source\repos\Plan_Day\Plan_Day\Plan_Day\bin\Debug\netstandard2.0\Plan_Day.dll
+C:\Users\kszpy\source\repos\Plan_Day\Plan_Day\Plan_Day\bin\Debug\netstandard2.0\ref\Plan_Day.dll
+C:\Users\kszpy\source\repos\Plan_Day\Plan_Day\Plan_Day\bin\Debug\netstandard2.0\Plan_Day.pdb
+C:\Users\kszpy\source\repos\Plan_Day\Plan_Day\Plan_Day\obj\Debug\netstandard2.0\Plan_Day.csprojAssemblyReference.cache
+C:\Users\kszpy\source\repos\Plan_Day\Plan_Day\Plan_Day\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\kszpy\source\repos\Plan_Day\Plan_Day\Plan_Day\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\kszpy\source\repos\Plan_Day\Plan_Day\Plan_Day\obj\Debug\netstandard2.0\Plan_Day.AssemblyInfoInputs.cache
+C:\Users\kszpy\source\repos\Plan_Day\Plan_Day\Plan_Day\obj\Debug\netstandard2.0\Plan_Day.AssemblyInfo.cs
+C:\Users\kszpy\source\repos\Plan_Day\Plan_Day\Plan_Day\obj\Debug\netstandard2.0\Plan_Day.dll
+C:\Users\kszpy\source\repos\Plan_Day\Plan_Day\Plan_Day\obj\Debug\netstandard2.0\ref\Plan_Day.dll
+C:\Users\kszpy\source\repos\Plan_Day\Plan_Day\Plan_Day\obj\Debug\netstandard2.0\Plan_Day.pdb
+C:\Users\kszpy\source\repos\Plan_Day\Plan_Day\Plan_Day\obj\Debug\netstandard2.0\SignUpPage.xaml.g.cs
+C:\Users\kszpy\source\repos\Plan_Day\Plan_Day\Plan_Day\obj\Debug\netstandard2.0\MainContent.xaml.g.cs
+C:\Users\kszpy\source\repos\Plan_Day\Plan_Day\Plan_Day\obj\Debug\netstandard2.0\XamlC.stamp

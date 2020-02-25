@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Plan_Day.App">
+    <Application.Resources>
+
+        <!--  Fonts  -->
+        <OnPlatform x:Key="TextBold" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="Poppins" />
+            <On Platform="Android" Value="PoppinsBold.ttf#Poppins" />
+        </OnPlatform>
+
+        <OnPlatform x:Key="TextLight" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="Poppins Light" />
+            <On Platform="Android" Value="PoppinsLight.ttf#Poppins Light" />
+        </OnPlatform>
+
+        <OnPlatform x:Key="TextSemiBold" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="Poppins SemiBold" />
+            <On Platform="Android" Value="PoppinsSemiBold.ttf#Poppins SemiBold" />
+        </OnPlatform>
+
+        <!--FontColors-->
+        <Color x:Key="SignInColor">#EF3765</Color>
+        <Color x:Key="SignUpColor">#FFFFFF</Color>
+        <Color x:Key="GrayColor">#B0B0B0</Color>
+
+        <Color x:Key="HeaderColor">#FFFFFF</Color>
+        <Color x:Key="DescriptionColor">#FFFFFF</Color>
+
+        <!--BackgroundGradients-->
+        <Color x:Key="BackgroundGradientStartColor">#355A98</Color>
+        <Color x:Key="BackgroundGradientEndColor">#652C65</Color>
+
+        <!--CircleGradients-->
+        <Color x:Key="CircleGradientStartColor">#7DA8F3</Color>
+        <Color x:Key="CircleGradientEndColor">#A470A4</Color>
+
+        <!-- Background Image -->
+        <x:String x:Key="MountainImage">mountain_light</x:String>
+
+        <!--  Styles  -->
+        <Style x:Key="SignIn" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource TextSemiBold}" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="TextColor" Value="{DynamicResource SignInColor}" />
+        </Style>
+        <Style x:Key="SignUp" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource TextLight}" />
+            <Setter Property="FontSize" Value="10" />
+            <Setter Property="TextColor" Value="{DynamicResource SignUpColor}" />
+        </Style>
+        <Style x:Key="Dark" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource TextLight}" />
+            <Setter Property="FontSize" Value="10" />
+            <Setter Property="TextColor" Value="{DynamicResource GrayColor}" />
+        </Style>
+
+        <Style x:Key="Header" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource TextSemiBold}" />
+            <Setter Property="FontSize" Value="40" />
+            <Setter Property="TextColor" Value="{DynamicResource HeaderColor}" />
+        </Style>
+        <Style x:Key="Description" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource TextLight}" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="TextColor" Value="{DynamicResource DescriptionColor}" />
+        </Style>
+        <Style x:Key="Username" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource TextLight}" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="TextColor" Value="{DynamicResource DescriptionColor}" />
+        </Style>
+    </Application.Resources>
+</Application>
